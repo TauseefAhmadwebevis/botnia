@@ -1,0 +1,99 @@
+{{ 'hero-banner.css' | asset_url | stylesheet_tag }}
+
+<section class="hero-banner">
+  {% if section.settings.bg_img != blank %}
+    <div class="hero-banner__media">
+      <picture>
+        {% if section.settings.bg_img_mobile != blank %}
+          <source media="(max-width:989px)" srcset="{{ section.settings.bg_img_mobile | image_url }}">
+        {% endif %}
+        <img src="{{ section.settings.bg_img | image_url }}" alt="{{ section.settings.bg_img.alt }}" class="hero-banner__img">
+      </picture>
+    </div>
+  {% endif %}
+  <div class="hero-banner__container">
+    {% if section.settings.heading != blank %}
+      <h1 class="hero-banner__title color-white text-center" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ section.settings.heading }}</h1>
+    {% endif %}
+    {% if section.settings.btn_label != blank or section.settings.btn_label_2 != blank %}
+      <div class="hero-banner__cta">
+        {% if section.settings.btn_label != blank %}
+          <a href="{{ section.settings.btn_url }}" class="btn btn--bg-img btn--bg-blank color-off-white" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ section.settings.btn_label }}</a>
+        {% endif %}
+        {% if section.settings.btn_label_2 != blank %}
+          <a href="{{ section.settings.btn_url_2 }}" class="btn btn--bg-img btn--bg-full color-light-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ section.settings.btn_label_2 }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="hero-banner__bottom-text">
+      {% if section.settings.left_desc %}
+        <p class="hero-banner__bottom-desc hero-banner__bottom-desc--left color-white text-left" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+          {{ section.settings.left_desc | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
+      {% if section.settings.right_desc %}
+        <p class="hero-banner__bottom-desc hero-banner__bottom-desc--right color-white text-right" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+          {{ section.settings.right_desc | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Bg Image",
+      "id": "bg_img"
+    },
+    {
+      "type": "image_picker",
+      "label": "Bg Image Mobile",
+      "id": "bg_img_mobile"
+    },
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "richtext",
+      "label": "Left Description",
+      "id": "left_desc"
+    },
+    {
+      "type": "richtext",
+      "label": "Right Description",
+      "id": "right_desc"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "btn_label"
+    },
+    {
+      "type": "url",
+      "label": "Button URL",
+      "id": "btn_url"
+    },
+    {
+      "type": "text",
+      "label": "Button Label 2",
+      "id": "btn_label_2"
+    },
+    {
+      "type": "url",
+      "label": "Button URL 2",
+      "id": "btn_url_2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}

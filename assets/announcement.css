@@ -1,0 +1,46 @@
+.announcement {
+  padding: 14px 15px;
+  min-height: 49px; 
+}
+
+.announcement__container {
+  max-width: 353px;
+  width: 100%;
+  margin: 0 auto;
+} 
+
+.announcement__text, 
+.announcement__text * {
+  text-align: center;
+  font-family: var(--font-teritary);
+  font-size: var(--font-size-13);
+  line-height: 161%;
+  letter-spacing: 0;
+  font-weight: var(--font-weight-300);
+  padding: 0 20px;
+}
+
+.announcement__link {
+  text-decoration: none;
+  padding: 0;
+  transition: all 0.4s ease;
+}
+
+.announcement__link:hover {
+  text-decoration: underline;
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+  color: var(--color-white);
+  background: var(--color-black);
+}
+
+.swiper-button-prev {
+  transform: rotate(180deg);
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
