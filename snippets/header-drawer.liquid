@@ -133,6 +133,11 @@
                   {%- endif -%}
                 </li>
               {%- endfor -%}
+              {% if wholesale != blank %}
+                <li>
+                  <a href="{{ wholesaleurl }}" class="menu-drawer__menu-item link link--text list-menu__item">{{ wholesale }}</a>
+                </li>
+              {% endif %}
             </ul>
           </nav>
           <div class="menu-drawer__utility-links">

@@ -296,8 +296,16 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    {% comment %} ==== swiper cdns  ==== {% endcomment %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    {% comment %} == aos library === {% endcomment %}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    {% comment %} ==== custom code ==== {% endcomment %}
     {% render 'fonts' %}
     {% render 'global-style' %}
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -374,5 +382,13 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script>
+      AOS.init({
+        once: true, // Run only once
+        offset: 0, // Trigger as soon as element is in viewport
+        duration: 800, // Animation duration in ms
+        easing: 'ease-out', // Smooth easing
+      });
+    </script>
   </body>
 </html>
