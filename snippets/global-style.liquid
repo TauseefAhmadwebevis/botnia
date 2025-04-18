@@ -1,0 +1,142 @@
+{% assign colors = 'black:#000000,white:#FFFFFF,off-white:#FFFEF9,light-black:#2C2C2C,light-black2:#0E1514,blue:#C7DDFF,grey:#676767,light-black-3:#202020,grey2:#9D9B96,light-black-4:#040404,light-yellow:#F8F6F2,cultured:#F8F8F8' %}
+{% assign colors_array = colors | split: ',' %}
+
+{% assign background_colors = 'background-default:255,255,255' %}
+{% assign background_colors_array = background_colors | split: '|' %}
+<style>
+  :root {
+    --font-primary: "Bagoss TRIAL", sans-serif;
+    --font-secondary:  "Bagoss Standard TRIAL", sans-serif;
+    --font-teritary:  "Bagoss Condensed TRIAL", sans-serif;
+    --font-quaternary:  "IBM Plex Serif", serif;
+    /* ==== color variables ===== */
+    {% for color in colors_array %}
+      {% assign color_parts = color | split: ':' %}
+      --color-{{ color_parts[0] }}: {{ color_parts[1] }};
+    {% endfor %}
+    /* ==== background variables ===== */
+    {% for background_color in background_colors_array %}
+      {% assign color_parts = background_color | split: ':' %}
+      --bg-{{ color_parts[0] | strip }}: {{ color_parts[1] | strip }};
+    {% endfor %}
+    /* ==== font weights === */
+    --font-weight-100: 100;
+    --font-weight-200: 200;
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+    --font-weight-900: 900;
+    /* ==== headline-xl ==== */
+    --font-size-09: 9px;
+    --font-size-10: 10px;
+    --font-size-11: 11px;
+    --font-size-12: 12px;
+    --font-size-13: 13px;
+    --font-size-14: 14px;
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-22: 22px;
+    --font-size-24: 24px;
+    --font-size-26: 26px; 
+    --font-size-28: 28px; 
+    --font-size-30: 30px;
+    --font-size-90: 90px;
+  }
+
+  {% for color in colors_array %}
+    {% assign color_parts = color | split: ':' %}
+    .color-{{ color_parts[0]  }} {
+      color: var(--color-{{ color_parts[0] }});
+    }
+
+    .hover\:color-{{ color_parts[0]  }} *:hover {
+      color: var(--color-{{ color_parts[0]  }});
+    }
+
+    .bg-{{ color_parts[0]  }} {
+      background-color: var(--color-{{ color_parts[0] }});
+    }
+  {% endfor %}
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-weight: var(--font-weight-400);
+    line-height: 30.24px;
+  }
+
+  .heading-xl {
+    font: var(--font-headline-xl);
+    letter-spacing: var(--font-headline-xl-letter-spacing);
+  }
+
+  .h1,
+  h1 {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-22);
+    line-height: 130%;
+    font-weight: var(--font-weight-500);
+    letter-spacing: 0;
+  }
+
+  .h2,
+  h2 {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-26);
+    line-height: 130%;
+    letter-spacing: 0;
+    font-weight: var(--font-weight-500);
+  }
+
+  .h3,
+  h3 {
+    font-size: var(--font-size-30);
+    letter-spacing: 0;
+    font-weight: var(--font-weight-500);
+    font-family: var(--font-secondary);
+  }
+
+  .h4,
+  h4 {
+    font-size: var(--font-size-28);
+    letter-spacing: 0;
+    line-height: 130%;
+    font-family: var(--font-teritary);
+  }
+
+  .h5,
+  h5 {
+    font: var(--font-size-90);
+    letter-spacing: 0;
+    line-height: 130%;
+    font-weight: var(--font-weight-500);
+    font-family: var(--font-secondary);
+  }
+
+  .h6,
+  h6 {
+    font: var(--font-size-24);
+    letter-spacing: 0;
+    line-height: 130%;
+    font-family: var(--font-primary);
+  }
+</style>
