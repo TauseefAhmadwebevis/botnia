@@ -1,0 +1,133 @@
+{{ 'edition-grid.css' | asset_url | stylesheet_tag }}
+
+<section class="edition">
+  <div class="edition__container">
+    {% if section.blocks.size > 0 %}
+      <div class="edition__grid">
+        {% for block in section.blocks %}
+          <div class="edition__grid-item edition__grid-item--{{ forloop.index }}">
+            <div class="edition__grid-media">
+              {% if block.settings.image != blank %}
+                <picture>
+                  {% if block.settings.image_mobile != blank %}
+                    <source media="(max-width:989px)" srcset="{{ block.settings.image_mobile | image_url }}">
+                  {% endif %}
+                  <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" class="edition__grid__img">
+                </picture>
+              {% endif %}
+              {% if block.settings.image == blank and block.settings.video %}
+                <video autoplay muted loop playsinline class="edition__grid__video">
+                  {% for source in block.settings.video.sources %}
+                    <source src="{{ source.url }}" type="{{ source.type }}">
+                  {% endfor %}
+                </video>
+              {% endif %}
+            </div>
+            {% if block.settings.top_tag != blank %}
+              <p class="edition__grid-top-tag color-white" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ block.settings.top_tag }}</p>
+            {% endif %}
+            <div class="edition__grid-content">
+              {% if block.settings.caption != blank %}
+                <p class="edition__grid-caption color-white" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ block.settings.caption }}</p>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h2 class="edition__grid-heading h3 color-white" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                  {% if block.settings.link != blank %}
+                    <a href="{{ block.settings.link }}">
+                      {{ block.settings.title }}
+                    </a>
+                  {% else %}
+                    {{ block.settings.title }}
+                  {% endif %}
+                </h2> 
+              {% endif %}
+              {% if block.settings.tags != blank %}
+                <div class="edition__grid-tags">
+                  {% assign tags = block.settings.tags |  split: ',' %}
+                  {% for tag in tags %}
+                    <p class="edition__grid-tag edition__grid-tag--{{ tag | handleize }} color-light-black2" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ tag }}</p>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Edition Grid",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "edition_item",
+        "name": "Edition Item",
+        "settings": [
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video",
+            "info": "Video will only show if image is not uploaded."
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Desktop Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "text",
+            "id": "top_tag",
+            "label": "Top Tag"
+          },
+          {
+            "type": "text",
+            "id": "caption",
+            "label": "Caption"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "textarea",
+            "id": "tags",
+            "label": "Tags",
+            "info": "Add different tags separated by commas."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Edition Grid",
+        "category": "Custom",
+        "blocks": [
+          {
+            "type": "edition_item"
+          },
+          {
+            "type": "edition_item"
+          },
+          {
+            "type": "edition_item"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+  

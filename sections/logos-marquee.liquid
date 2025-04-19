@@ -1,0 +1,61 @@
+{{ 'logos-marquee.css' | asset_url | stylesheet_tag }}
+
+<section class="logos-marquee">
+  <div class="logos-marquee__container">
+    {% if section.blocks.size > 0 %}
+      <div class="logos-marquee__logo-list" data-aos="fade-up"  data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+        <div class="swiper logosMarquee">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                {% if block.settings.logo_image != blank %}
+                  <img src="{{ block.settings.logo_image | image_url }}" alt="{{ block.settings.logo_image.alt }}" height="{{ block.settings.logo_image.height }}" width="{{ block.settings.logo_image.width }}" />
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{{ 'logos-marquee.js' | asset_url | script_tag }}
+
+{% schema %}
+  {
+    "name": "Logos Marquee",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo_image",
+            "label": "Logo Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Logos Marquee",
+        "category": "Custom",
+        "blocks": [
+          {
+            "type": "logo"
+          },
+          {
+            "type": "logo"
+          },
+          {
+            "type": "logo"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+  
