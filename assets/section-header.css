@@ -61,6 +61,48 @@
   display: none;
 }
 
+.scrolled-past-header * {
+  transition: all 0.3s ease;
+}
+
+body:not(.template--index) .scrolled-past-header, 
+.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) {
+  background: var(--color-light-yellow);
+}
+
+body:not(.template--index) .list-menu__item, 
+body:not(.template--index) .list-menu__item *, 
+body:not(.template--index) .header__svg,
+.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) .list-menu__item,
+.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) .list-menu__item *,
+.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) .header__svg {
+  color: var(--color-black);
+}
+
+.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) .header__svg--acount svg g:nth-child(1) g g path, 
+body:not(.template--index) .header__svg--acount svg g:nth-child(1) g g path {
+  fill: var(--color-black);
+}
+
+body:not(.template--index) .header__svg:not(.header__svg--acount) svg path,
+.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) .header__svg:not(.header__svg--acount) svg path {
+  fill: var(--color-black);
+}
+
+body:not(.template--index) .header__heading-logo, 
+.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) .header__heading-logo {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(235deg) brightness(93%) contrast(106%);
+}
+
+.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) .header__icon--summary svg path,
+body:not(.template--index) .header__icon--summary svg path {
+  fill: var(--color-black);
+}
+
 @media (max-width: 989px) {
   .header__svg--wholesale {
     display: none;

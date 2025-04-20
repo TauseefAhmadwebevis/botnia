@@ -1,0 +1,146 @@
+{{ 'product-grid.css' | asset_url | stylesheet_tag }}
+
+<section class="pro-grid">
+  <div class="pro-grid__container">
+    {% if section.settings.heading != blank %}
+      <h2 class="pro-grid__heading h4 color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ section.settings.heading | remove: '<p>' | remove: '</p>'   }}</h2>
+    {% endif %}
+    {% if section.blocks.size > 0 %}
+      <div class="pro-grid__blocks">
+        {% for block in section.blocks %}
+          {% if block.type == 'product' %}
+            <div class="pro-grid__block pro-grid__block--product pro-grid__block--{{ forloop.index }}">
+              {% render 'pdp-card', product: block.settings.product %}
+            </div>
+          {% endif %}
+          {% if block.type == 'image_card' %}
+            <div class="pro-grid__block pro-grid__block--image pro-grid__block--{{ forloop.index }}" 
+              style="--text-color: {{ block.settings.color }}; --text-size-desktop: {{ block.settings.font_desktop }}px; --text-size-mobile: {{ block.settings.font_mobile }}px;"
+            >
+              {% assign cardImg = block.settings.desktop_image %}
+              {% assign cadImgMobile = block.settings.mobile_image %}
+              {% assign cadTitle = block.settings.title %}
+              {% assign cadBtn = block.settings.button_text %}
+              {% assign cadBtnURL = block.settings.button_url %}
+              {% assign cadTag = block.settings.tag %}
+              {% assign cadvideo = block.settings.video %}
+
+              {% render 'image-card', 
+                card_img: cardImg,
+                card_img_mobile: cadImgMobile, 
+                card_video: cadvideo,
+                card_top_tag: cadTag
+                card_title: cadTitle,
+                card_btn_text: cadBtn,
+                card_btn_url: cadBtnURL
+              %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Grid",
+  "settings": [
+    {
+      "type": "richtext",
+      "label": "Heading",
+      "id": "heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Select Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select product"
+        }
+      ]
+    },
+    {
+      "type": "image_card",
+      "name": "Image Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video URL"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag",
+          "default": "Enter tag"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+        {
+          "type": "number",
+          "id": "font_desktop",
+          "label": "Heading F0nt Size in Desktop",
+          "default": 90,
+          "info": "The font sizes are in PX"
+        },
+        {
+          "type": "number",
+          "id": "font_mobile",
+          "label": "Heading Font Size in Mobile",
+          "default": 22,
+          "info": "The font sizes are in PX"
+        },
+        {
+          "type": "color",
+          "label": "Card Text Color",
+          "id": "color",
+          "default": "#FFFFFF"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Grid",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "image_card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

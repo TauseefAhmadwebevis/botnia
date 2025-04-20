@@ -132,12 +132,80 @@
         "edition_item_TemQf9"
       ],
       "settings": {}
+    },
+    "products_grid_HQYMwp": {
+      "type": "products-grid",
+      "blocks": {
+        "product_XY7EjG": {
+          "type": "product",
+          "settings": {
+            "product": "well-serum"
+          }
+        },
+        "product_DJXTjx": {
+          "type": "product",
+          "settings": {
+            "product": "well-serum-1"
+          }
+        },
+        "product_cUXMRJ": {
+          "type": "product",
+          "settings": {
+            "product": "well-serum-2"
+          }
+        },
+        "product_cCPjhe": {
+          "type": "product",
+          "settings": {
+            "product": "well-serum-3"
+          }
+        },
+        "image_card_LAiqij": {
+          "type": "image_card",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/Frame_759_1.png",
+            "video": "shopify:\/\/files\/videos\/file_example_MP4_480_1_5MG.mp4",
+            "title": "<p>Spring <br\/>Release<\/p>",
+            "tag": "New for ‘25",
+            "button_text": "Explore",
+            "button_url": "#",
+            "font_desktop": 90,
+            "font_mobile": 22,
+            "color": "#ffffff"
+          }
+        },
+        "product_XyNAgW": {
+          "type": "product",
+          "settings": {
+            "product": "well-serum-4"
+          }
+        },
+        "product_GYXaAd": {
+          "type": "product",
+          "settings": {
+            "product": "well-serum-copy"
+          }
+        }
+      },
+      "block_order": [
+        "product_XY7EjG",
+        "product_DJXTjx",
+        "product_cUXMRJ",
+        "product_cCPjhe",
+        "image_card_LAiqij",
+        "product_XyNAgW",
+        "product_GYXaAd"
+      ],
+      "settings": {
+        "heading": "<p>We partner with clients of all sizes and categories to support everything <br\/>from ongoing site maintenance to fully custom e-commerce sites. <br\/>Today, we’ve launched over 300? <a href=\"#\" title=\"#\">Design your regimen.<\/a> <\/p>"
+      }
     }
   },
   "order": [
     "hero_banner_Q3aedL",
     "logos_marquee_ndxN6f",
     "banner_with_text_8rzzUP",
-    "edition_grid_w3r3gM"
+    "edition_grid_w3r3gM",
+    "products_grid_HQYMwp"
   ]
 }

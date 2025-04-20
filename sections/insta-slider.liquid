@@ -1,0 +1,77 @@
+{{ 'insta-slider.css' | asset_url | stylesheet_tag }}
+
+<section class="insta-slider">
+  <div class="insta-slider__container">
+    {% if section.settings.caption != blank %}
+      <p class="insta-slider__caption color-grey2 text-center" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ section.settings.caption }}</p>
+    {% endif %}
+    {% if section.settings.heading != blank %}
+      <h6 class="insta-slider__heading color-black text-center" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ section.settings.heading | remove: '<p>' | remove: '</p>'   }}</h6>
+    {% endif %}
+    {% if section.blocks.size > 0 %}
+      <div class="insta-slider__blocks" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+        <div class="swiper instaSwiper">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %} 
+              {% if block.settings.image != blank %} 
+                <div class="swiper-slide">
+                  <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" class="insta-slider__img">
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{{ 'insta-slider.js' | asset_url | script_tag }}
+
+{% schema %}
+  {
+    "name": "Insta Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "caption",
+        "label": "Caption"
+      },
+      {
+        "type": "richtext",
+        "id": "heading",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image_block",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Insta Slider",
+        "category": "Custom",
+        "blocks": [
+          {
+            "type": "image_block"
+          },
+          {
+            "type": "image_block"
+          },
+          {
+            "type": "image_block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}  

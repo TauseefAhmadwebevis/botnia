@@ -1,0 +1,129 @@
+.pdp-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.pdp-card__media img {
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 0.85;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: 1px solid var(--color-black);
+}
+
+.pdp-card__info {
+  position: absolute;
+  bottom: -300px;
+  left: 0;
+  right: 0;
+  background: var(--color-off-yellow);
+  border: 1px solid var(--color-black);
+  padding: 15px 16px 13px;
+  transition: all 0.3s ease;
+}
+
+.pdp-card:hover .pdp-card__info { 
+  bottom: 0;
+}
+
+.pdp-card__info-title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-18);
+  line-height: 130%;
+  letter-spacing: 0;
+  font-weight: var(--font-weight-400);
+  color: var(--color-light-black2);
+  max-width: calc(100% - 28px);
+}
+
+.pdp-card__info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pdp-card__info-wish {
+  background: none;
+  border: none;
+  width: 18px;
+  cursor: pointer;
+}
+
+.pdp-card__info-desc {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-400);
+  line-height: 130%;
+  letter-spacing: 0.39px;
+  font-family: var(--font-primary);
+  color: var(--color-light-black2);
+  max-width: 280px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.pdp-card__info-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pdp-card__price-regular,
+.pdp-card__price-compare {
+  font-size: var(--font-size-18);
+  line-height: 156%;
+  letter-spacing: 0.22px;
+  font-weight: var(--font-weight-400);
+  font-family: var(--font-teritary);
+  color: var(--color-light-black2);
+}
+
+.pdp-card__info-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: calc(100% - 100px);
+}
+
+.pdp-card__price-compare {
+  text-decoration: line-through;
+  color: var(--color-grey);
+}
+
+.pdp-card__info-url {
+  font-size: var(--font-size-14);
+  line-height: 156%;
+  letter-spacing: 0.22px;
+  font-weight: var(--font-weight-400);
+  font-family: var(--font-teritary);
+  color: var(--color-light-black2);
+}
+
+.pdp-card__tag {
+  color: var(--color-grey);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-400);
+  letter-spacing: 0;
+  line-height: 120%;
+  font-family: var(--font-primary);
+  position: absolute;
+  top: 28px;
+  left: 35px;
+}
+
+@media (max-width: 990px) {
+  .pdp-card__tag {
+    top: 20px;
+    left: 20px;
+  }
+
+  .pdp-card__info-desc {
+    max-width: 100%;
+    width: 100%;
+  }
+}
