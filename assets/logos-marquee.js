@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var marquee = document.querySelector('.logosMarquee');
 
   if (marquee) {
-    var swiper = new Swiper('.logosMarquee', {
+    var marqueeSwiper = new Swiper('.logosMarquee', {
       slidesPerView: 2,
       spaceBetween: 0,
       loop: true,

@@ -11,11 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      on: {
-        autoplayTimeLeft(s, time, progress) {
-          const fill = document.querySelector(".OurSlider .progress-fill");
-          fill.style.width = `${progress * 100}%`;
-        }
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
       }
     });
   } else {

@@ -163,6 +163,30 @@ html body .our-slider .progress-fill {
   z-index: 2;
 }
 
+.our-slider .swiper-scrollbar {
+  opacity: 1 !important;
+  max-width: 504px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  background: var(--color-grey-5);
+  left: 0;
+  right: 0;
+  border-radius: 0;
+} 
+
+.OurSlider {
+  padding-bottom: 70px;
+}
+
+html body .swiper-scrollbar-drag {
+  display: block;
+  height: 8px;
+  top: -2px;
+  border-radius: 0;
+  background: var(--color-grey-5);
+}
+
 @media (max-width: 990px) {
   html body .our-slider__layout .our-slider__grid {
     max-width: 80%;
@@ -215,6 +239,10 @@ html body .our-slider .progress-fill {
 
   .our-slider__lauoyt--2 .our-slider__img--1 {
     order: 3;
+  }
+
+  .our-slider {
+    padding: 64px 0 0;
   }
 }
 
