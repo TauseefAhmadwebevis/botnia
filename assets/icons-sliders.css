@@ -1,6 +1,7 @@
 .icons-slider {
   padding: 35px 0;
   overflow: hidden;
+  background: var(--color-off-white);
 }
 
 .icons-slider__title {
@@ -39,4 +40,29 @@
   top: 3px;
   border-radius: 100px;
   background: var(--color-grey-6);
+}
+
+@media (max-width: 990px) {
+  .icons-slider .swiper-slide {
+    width: auto;
+    padding-right: 16px;
+    margin-right: 16px;
+  } 
+
+  .icons-slider__block {
+    gap: 10px;
+  }
+
+  .icons-slider__img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .icons-slider__title {
+    font-size: var(--font-size-18);
+  }
+
+  .icons-slider .swiper-slide:after {
+    height: 30px; 
+  }
 }

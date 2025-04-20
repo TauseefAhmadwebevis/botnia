@@ -367,6 +367,62 @@
         "caption": "@botniaskincare",
         "heading": "<p>Honest skincare, by way of nature.<br/>Hand crafted on the pacific coast, one batch at a time. </p>"
       }
+    },
+    "icons_slider_nkbWgh": {
+      "type": "icons-slider",
+      "blocks": {
+        "image_title_block_HxHwqw": {
+          "type": "image_title_block",
+          "settings": {
+            "block_image": "shopify://shop_images/Icons.png",
+            "title": "Free from Toxins, Fillers, and Synthetic Chemicals"
+          }
+        },
+        "image_title_block_873mE3": {
+          "type": "image_title_block",
+          "settings": {
+            "block_image": "shopify://shop_images/Icons_1.png",
+            "title": "Herbalist, Scientist, and Esthetician Formulated"
+          }
+        },
+        "image_title_block_YXq9jn": {
+          "type": "image_title_block",
+          "settings": {
+            "block_image": "shopify://shop_images/Icons_2.png",
+            "title": "Grown Organically and Locally"
+          }
+        },
+        "image_title_block_NhP9aE": {
+          "type": "image_title_block",
+          "settings": {
+            "block_image": "shopify://shop_images/Icons.png",
+            "title": "Free from Toxins, Fillers, and Synthetic Chemicals"
+          }
+        },
+        "image_title_block_wrRgwH": {
+          "type": "image_title_block",
+          "settings": {
+            "block_image": "shopify://shop_images/Icons_1.png",
+            "title": "Herbalist, Scientist, and Esthetician Formulated"
+          }
+        },
+        "image_title_block_DJHqkk": {
+          "type": "image_title_block",
+          "settings": {
+            "block_image": "shopify://shop_images/Icons_2.png",
+            "title": "Grown Organically and Locally"
+          }
+        }
+      },
+      "block_order": [
+        "image_title_block_HxHwqw",
+        "image_title_block_873mE3",
+        "image_title_block_YXq9jn",
+        "image_title_block_NhP9aE",
+        "image_title_block_wrRgwH",
+        "image_title_block_DJHqkk"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -377,6 +433,7 @@
     "products_grid_HQYMwp",
     "buttons_grid_nWd7Vm",
     "our_slider_zR8Tey",
-    "insta_slider_McFw6H"
+    "insta_slider_McFw6H",
+    "icons_slider_nkbWgh"
   ]
 }
