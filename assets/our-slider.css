@@ -99,6 +99,7 @@ html body .our-slider .progress-fill {
   margin-top: 15px;
   position: relative;
   right: -40px;
+  z-index: 1;
 }
 
 .our-slider__lauoyt--2 .our-slider__heading {

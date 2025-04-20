@@ -1,0 +1,65 @@
+{{ 'icons-sliders.css' | asset_url | stylesheet_tag }}
+
+<section class="icons-slider">
+  <div class="icons-slider__container">
+    {% if section.blocks.size > 0 %}
+      <div class="icons-slider__blocks">
+        <div class="swiper-container iconsSwiper">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                <div class="icons-slider__block">
+                  <div class="icons-slider__icon">
+                    <img src="{{ block.settings.block_image | image_url }}" alt="{{ block.settings.block_image.alt }}" class="icons-slider__img" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;" />
+                  </div>
+                  {% if block.settings.title != blank %}
+                    <h5 class="icons-slider__title color-light-black-4" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ block.settings.title }}</h5>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{{ 'icons-sliders.js' | asset_url | script_tag }}
+
+{% schema %}
+  {
+    "name": "Icons Slider",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "image_title_block",
+        "name": "Image & Title",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icons Slider",
+        "blocks": [
+          {
+            "type": "image_title_block"
+          },
+          {
+            "type": "image_title_block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}  
