@@ -89,6 +89,12 @@
   text-decoration: underline;
 }
 
+@media (max-width: 990px) {
+  .edition__grid-content {
+    padding: 20px 16px;
+  }
+}
+
 @media (max-width: 767px) {
   .edition__grid {
     flex-direction: column;

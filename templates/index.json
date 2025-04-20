@@ -1,12 +1,21 @@
-{
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "sections": {
     "hero_banner_Q3aedL": {
       "type": "hero-banner",
       "settings": {
-        "bg_img": "shopify:\/\/shop_images\/Group_614_1_1.png",
+        "bg_img": "shopify://shop_images/Group_614_1_1.png",
         "heading": "Single-origin skincare, hand-crafted on the Pacific Coast",
-        "left_desc": "<p>Love your skin<\/p>",
-        "right_desc": "<p>Jules, Well Serum Shoot.<br\/>Pacific Coast 2024<br\/>©Botnia 040924<\/p>",
+        "left_desc": "<p>Love your skin</p>",
+        "right_desc": "<p>Jules, Well Serum Shoot.<br/>Pacific Coast 2024<br/>©Botnia 040924</p>",
         "btn_label": "Shop Now",
         "btn_url": "#",
         "btn_label_2": "How it’s Made",
@@ -19,61 +28,61 @@
         "logo_qjMaNa": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/Cosmopolitan-Emblem.png"
+            "logo_image": "shopify://shop_images/Cosmopolitan-Emblem.png"
           }
         },
         "logo_T8eLdT": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/Vogue_Logo.png"
+            "logo_image": "shopify://shop_images/Vogue_Logo.png"
           }
         },
         "logo_QUxT3W": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/gq-logo-png-transparent_1_1.png"
+            "logo_image": "shopify://shop_images/gq-logo-png-transparent_1_1.png"
           }
         },
         "logo_PYQT7B": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/layer1.svg"
+            "logo_image": "shopify://shop_images/layer1.svg"
           }
         },
         "logo_PE4pfF": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/Vector.svg"
+            "logo_image": "shopify://shop_images/Vector.svg"
           }
         },
         "logo_GkhfWV": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/Cosmopolitan-Emblem.png"
+            "logo_image": "shopify://shop_images/Cosmopolitan-Emblem.png"
           }
         },
         "logo_LAyXKy": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/Vogue_Logo.png"
+            "logo_image": "shopify://shop_images/Vogue_Logo.png"
           }
         },
         "logo_mY7dEA": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/gq-logo-png-transparent_1_1.png"
+            "logo_image": "shopify://shop_images/gq-logo-png-transparent_1_1.png"
           }
         },
         "logo_B9Brct": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/layer1_049bf7ce-b717-496c-bc59-6c10c81e4492.svg"
+            "logo_image": "shopify://shop_images/layer1_049bf7ce-b717-496c-bc59-6c10c81e4492.svg"
           }
         },
         "logo_bKPL4g": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/Vector_ec08efcc-f257-40ed-9629-b5897ba9077b.svg"
+            "logo_image": "shopify://shop_images/Vector_ec08efcc-f257-40ed-9629-b5897ba9077b.svg"
           }
         }
       },
@@ -94,8 +103,8 @@
     "banner_with_text_8rzzUP": {
       "type": "banner-with-text",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/image_1.png",
-        "mobile_image": "shopify:\/\/shop_images\/image_1_1.png",
+        "desktop_image": "shopify://shop_images/image_1.png",
+        "mobile_image": "shopify://shop_images/image_1_1.png",
         "heading": "This is the story of your skin. A collective experience <br>of all that you are, and all that you will become.",
         "caption": "Honest Skincare. Sustainable by Design."
       }
@@ -106,23 +115,23 @@
         "edition_item_YheM6D": {
           "type": "edition_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_751.png",
+            "image": "shopify://shop_images/Frame_751.png",
             "top_tag": "Limited Edition",
             "caption": "Note Here",
             "title": "How we created Botnia",
-            "link": "shopify:\/\/collections",
+            "link": "shopify://collections",
             "tags": "In stock"
           }
         },
         "edition_item_TemQf9": {
           "type": "edition_item",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/file_example_MP4_480_1_5MG.mp4",
-            "image": "shopify:\/\/shop_images\/img_25268244611115.lazyautosizes.ls-is-cached.lazyloaded_1.png",
+            "video": "shopify://files/videos/file_example_MP4_480_1_5MG.mp4",
+            "image": "shopify://shop_images/img_25268244611115.lazyautosizes.ls-is-cached.lazyloaded_1.png",
             "top_tag": "Limited Edition",
             "caption": "Note Here",
             "title": "Rose Geranium Hydrosol Pre-Launch",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "tags": "In stock,Tag two goes here"
           }
         }
@@ -163,9 +172,9 @@
         "image_card_LAiqij": {
           "type": "image_card",
           "settings": {
-            "mobile_image": "shopify:\/\/shop_images\/Frame_759_1.png",
-            "video": "shopify:\/\/files\/videos\/file_example_MP4_480_1_5MG.mp4",
-            "title": "<p>Spring <br\/>Release<\/p>",
+            "mobile_image": "shopify://shop_images/Frame_759_1.png",
+            "video": "shopify://files/videos/file_example_MP4_480_1_5MG.mp4",
+            "title": "<p>Spring <br/>Release</p>",
             "tag": "New for ‘25",
             "button_text": "Explore",
             "button_url": "#",
@@ -197,7 +206,166 @@
         "product_GYXaAd"
       ],
       "settings": {
-        "heading": "<p>We partner with clients of all sizes and categories to support everything <br\/>from ongoing site maintenance to fully custom e-commerce sites. <br\/>Today, we’ve launched over 300? <a href=\"#\" title=\"#\">Design your regimen.<\/a> <\/p>"
+        "heading": "<p>We partner with clients of all sizes and categories to support everything <br/>from ongoing site maintenance to fully custom e-commerce sites. <br/>Today, we’ve launched over 300? <a href=\"#\" title=\"#\">Design your regimen.</a> </p>"
+      }
+    },
+    "buttons_grid_nWd7Vm": {
+      "type": "buttons-grid",
+      "blocks": {
+        "link_block_4zpTrb": {
+          "type": "link_block",
+          "settings": {
+            "title": "Moisturize",
+            "link": "#"
+          }
+        },
+        "link_block_JG3G3Y": {
+          "type": "link_block",
+          "settings": {
+            "title": "Cleanse",
+            "link": "#"
+          }
+        },
+        "link_block_rUzgWA": {
+          "type": "link_block",
+          "settings": {
+            "title": "Exfoliate",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "link_block_4zpTrb",
+        "link_block_JG3G3Y",
+        "link_block_rUzgWA"
+      ],
+      "settings": {
+        "desktop_image": "shopify://shop_images/Frame_754_1_1.png"
+      }
+    },
+    "our_slider_zR8Tey": {
+      "type": "our-slider",
+      "blocks": {
+        "layuout1_L4tCFa": {
+          "type": "layuout1",
+          "settings": {
+            "img_1": "shopify://shop_images/Group_427.png",
+            "img_2": "shopify://shop_images/Frame_145.png",
+            "title": "<p>Our Atelier</p>",
+            "desc": "<p>The Botnia Atelier is our treatment room workshop, a place to create healing skincare. <br/>Treatment room workshop, a place to create healing skincare</p>",
+            "caption_1": "jules, sausalito, ca 2024",
+            "caption_2": "justine in the treatment room, 2023"
+          }
+        },
+        "layuout2_xJTQzL": {
+          "type": "layuout2",
+          "settings": {
+            "img_1": "shopify://shop_images/Group_423_1.png",
+            "img_2": "shopify://shop_images/Group_423.png",
+            "title": "<p>How It’s Made</p>",
+            "desc": "<p>See when it was made, who made it, and individual lab notes. <br/>Just enter the hand-written batch number from your packaging.<br/>See when it was made, who made it, and individual lab notes. </p>",
+            "caption_1": "",
+            "caption_2": "rose geranium in microfarm, botnia hq"
+          }
+        },
+        "layuout3_HVQ8RC": {
+          "type": "layuout3",
+          "settings": {
+            "img_1": "shopify://shop_images/Group_425.png",
+            "img_2": "shopify://shop_images/Frame_201.png",
+            "title": "<p>Closed Loop Packaging</p>",
+            "desc": "<p>Our commitment begins begins with your packaging. Recyclable, compostable, reusable, kind. <br/>Gins with your packaging. Recyclable, compostable, reusable, kind.</p>",
+            "caption_1": "our bio-degradable packaging",
+            "caption_2": "toxin-free aluminum bottles on the assembly line"
+          }
+        }
+      },
+      "block_order": [
+        "layuout1_L4tCFa",
+        "layuout2_xJTQzL",
+        "layuout3_HVQ8RC"
+      ],
+      "settings": {}
+    },
+    "insta_slider_McFw6H": {
+      "type": "insta-slider",
+      "blocks": {
+        "image_block_KbadFm": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Group_432.png"
+          }
+        },
+        "image_block_YWLzNd": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Group_432.png"
+          }
+        },
+        "image_block_FkwPTF": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Group_432.png"
+          }
+        },
+        "image_block_aVA7ME": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Group_432.png"
+          }
+        },
+        "image_block_tJiarg": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Group_432.png"
+          }
+        },
+        "image_block_CC3xFf": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Group_432.png"
+          }
+        },
+        "image_block_AXQdLK": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Group_432.png"
+          }
+        },
+        "image_block_UwLzz4": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Group_432.png"
+          }
+        },
+        "image_block_zJfHT8": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Group_432.png"
+          }
+        },
+        "image_block_6grcKW": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Group_432.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_KbadFm",
+        "image_block_YWLzNd",
+        "image_block_FkwPTF",
+        "image_block_aVA7ME",
+        "image_block_tJiarg",
+        "image_block_CC3xFf",
+        "image_block_AXQdLK",
+        "image_block_UwLzz4",
+        "image_block_zJfHT8",
+        "image_block_6grcKW"
+      ],
+      "settings": {
+        "caption": "@botniaskincare",
+        "heading": "<p>Honest skincare, by way of nature.<br/>Hand crafted on the pacific coast, one batch at a time. </p>"
       }
     }
   },
@@ -206,6 +374,9 @@
     "logos_marquee_ndxN6f",
     "banner_with_text_8rzzUP",
     "edition_grid_w3r3gM",
-    "products_grid_HQYMwp"
+    "products_grid_HQYMwp",
+    "buttons_grid_nWd7Vm",
+    "our_slider_zR8Tey",
+    "insta_slider_McFw6H"
   ]
 }

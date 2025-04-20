@@ -66,7 +66,9 @@
 }
 
 body:not(.template--index) .scrolled-past-header, 
-.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden) {
+.scrolled-past-header.shopify-section-header-sticky.animate:not(.shopify-section-header-hidden),
+.menu-drawer__navigation,
+body:not(.template--index) .header-wrapper {
   background: var(--color-light-yellow);
 }
 
