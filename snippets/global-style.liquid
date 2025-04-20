@@ -1,4 +1,4 @@
-{% assign colors = 'black:#000000,white:#FFFFFF,off-white:#FFFEF9,light-black:#2C2C2C,light-black2:#0E1514,blue:#C7DDFF,grey:#676767,light-black-3:#202020,grey2:#9D9B96,light-black-4:#040404,light-yellow:#F8F6F2,cultured:#F8F8F8' %}
+{% assign colors = 'black:#000000,white:#FFFFFF,off-white:#FFFEF9,light-black:#2C2C2C,light-black2:#0E1514,blue:#C7DDFF,grey:#676767,light-black-3:#202020,grey2:#9D9B96,light-black-4:#040404,light-yellow:#F8F6F2,cultured:#F8F8F8,off-yellow:#FFFDF4,grey-5:#CDCDCD,grey-6:#D5D5D5' %}
 {% assign colors_array = colors | split: ',' %}
 
 {% assign background_colors = 'background-default:255,255,255' %}
@@ -38,6 +38,7 @@
     --font-size-14: 14px;
     --font-size-16: 16px;
     --font-size-18: 18px;
+    --font-size-20: 20px;
     --font-size-22: 22px;
     --font-size-24: 24px;
     --font-size-26: 26px; 
@@ -125,7 +126,7 @@
 
   .h5,
   h5 {
-    font: var(--font-size-90);
+    font-size: var(--font-size-90);
     letter-spacing: 0;
     line-height: 130%;
     font-weight: var(--font-weight-500);
@@ -134,7 +135,7 @@
 
   .h6,
   h6 {
-    font: var(--font-size-24);
+    font-size: var(--font-size-24);
     letter-spacing: 0;
     line-height: 130%;
     font-family: var(--font-primary);

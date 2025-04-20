@@ -1,0 +1,34 @@
+{{ 'card-img.css' | asset_url | stylesheet_tag }}
+
+<div class="img-card">
+  {% if card_video != blank or cad_img != blank %}
+    <div class="img-card__media">
+      {% if card_img != blank %}
+        <picture>
+          {% if card_img_mobile != blank %}
+            <source media="(max-width:989px)" srcset="{{ card_img_mobile | image_url }}">
+          {% endif %}
+          <img src="{{ card_img | image_url }}" alt="{{ card_img.alt }}" class="img-card__img">
+        </picture>
+      {% endif %}
+      {% if card_img ==  blank and card_video != blank %}
+        <video autoplay muted loop playsinline class="img-card__video">
+          {% for source in card_video.sources %}
+            <source src="{{ source.url }}" type="{{ source.type }}">
+          {% endfor %}
+        </video>
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if card_top_tag != blank %}
+    <p class="img-card__tag" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ card_top_tag }}</p>
+  {% endif %}
+  <div class="img-card__content">
+    {% if card_title != blank %}
+      <h4 class="img-card__heading h5" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ card_title | remove: '<p>' | remove: '</p>'   }}</h4>
+    {% endif %}
+    {% if card_btn_text != blank %}
+      <a href="{{ card_btn_url }}" class="img-card__link" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ card_btn_text }}</a>
+    {% endif %}
+  </div>
+</div>

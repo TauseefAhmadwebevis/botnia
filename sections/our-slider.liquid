@@ -1,0 +1,316 @@
+{{ 'our-slider.css' | asset_url | stylesheet_tag }}
+
+<section class="our-slider">
+  <div class="our-slider__container">
+    {% if section.blocks.size > 0 %}
+      <div class="swiper-container OurSlider">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              {% if block.type == 'layuout1' %}
+                <div class="our-slider__layout our-slider__lauoyt--1">
+                  <div class="our-slider__grid">
+                    <div class="our-slider__grid-item our-slider__grid-item--left">
+                      {% if block.settings.title != blank %}
+                        <h5 class="our-slider__heading color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          <span>
+                            {{ block.settings.title | remove: '<p>' | remove: '</p>' }}
+                          </span>
+                          <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.71973 0.61084C7.86113 0.623259 8.00123 0.652043 8.13672 0.695801C8.17956 0.712366 8.22494 0.722113 8.27051 0.726074C8.31617 0.724441 8.36163 0.734022 8.40332 0.753418C8.44512 0.772877 8.4825 0.801779 8.51172 0.838379C8.55482 0.884132 8.60421 0.923664 8.6582 0.95459C8.95942 1.14812 9.22836 1.39095 9.45508 1.67334C9.52683 1.75431 9.61453 1.80453 9.68652 1.88525C9.81112 2.02483 9.92886 2.17781 10.0498 2.32471C10.1948 2.50032 10.3392 2.67677 10.4854 2.8501C10.6186 3.00823 10.7525 3.16653 10.8887 3.31885C11.0421 3.49031 11.1991 3.65476 11.3535 3.82471C11.3779 3.85001 11.4111 3.88379 11.4141 3.91846C11.4219 4.01688 11.4607 4.02507 11.5137 4.05225C11.5828 4.10345 11.6447 4.16474 11.6973 4.23389C11.7803 4.33716 11.8742 4.43065 11.9766 4.51318C12.191 4.64623 12.3161 4.93361 12.4854 5.14209C12.567 5.24709 12.6243 5.37074 12.6523 5.50244C12.6804 5.63413 12.6779 5.771 12.6465 5.90186C12.6339 5.96927 12.608 6.03359 12.5693 6.08936C12.3693 6.35247 12.1686 6.6153 11.9609 6.86475C11.7801 7.08184 11.5895 7.28035 11.4033 7.48682C11.3508 7.53709 11.3018 7.59124 11.2559 7.64795C11.0241 7.94571 10.7481 8.20346 10.4385 8.41162C10.2625 8.547 10.0812 8.66835 9.90527 8.80322C9.76652 8.90945 9.63242 9.03071 9.49414 9.13818C9.41843 9.19489 9.33987 9.24736 9.25879 9.29541C9.13677 9.37132 9.01582 9.44248 8.89453 9.51611C8.8758 9.52753 8.85883 9.54909 8.83984 9.55615C8.60512 9.64243 8.3712 9.73618 8.13477 9.81006C7.99176 9.85418 7.84246 9.85841 7.69922 9.896C7.52093 9.94895 7.32974 9.93235 7.16211 9.8501C7.1348 9.83448 7.10434 9.82512 7.07324 9.82275C6.93946 9.83664 6.80477 9.80071 6.69434 9.72119C6.58388 9.64159 6.5048 9.52311 6.4707 9.38818C6.43734 9.00523 6.4997 9.00896 6.66699 8.69092C6.88295 8.41051 7.14574 8.17164 7.44238 7.98682C7.66104 7.80969 7.89223 7.64986 8.13379 7.5083C8.44848 7.28257 8.74444 7.02929 9.01855 6.75244C9.08195 6.65026 9.21673 6.52106 9.35645 6.39014H8.4043L7.88281 6.55029H6.7207L6.15137 6.39014C6.03277 6.44365 5.74293 6.55027 5.53418 6.55029H4.8457C4.56865 6.49674 3.91579 6.39014 3.51758 6.39014C3.11934 6.39018 2.7983 6.49676 2.6875 6.55029H2.02344L1.44727 6.47607H0.886719C0.838266 6.47607 0.791228 6.45912 0.753906 6.42822L0.508789 6.22607C0.461137 6.18662 0.433704 6.12777 0.433594 6.06592V5.20752C0.433594 5.18304 0.437847 5.15823 0.446289 5.13525L0.59668 4.72803C0.626862 4.64643 0.705004 4.59239 0.791992 4.59229H3.89746L4.68066 4.43115H5.29688C5.41548 4.43115 5.5816 4.59225 6.03223 4.59229H9.21094C9.20492 4.58392 9.19805 4.57626 9.19238 4.56787C8.98887 4.26653 8.34104 3.63283 8.13672 3.23682C7.9171 2.90789 7.1494 2.12106 6.93555 1.76221C6.69346 1.48715 6.63585 0.97434 6.88867 0.850098C7.14608 0.709675 7.42933 0.627785 7.71973 0.61084Z" fill="black"/>
+                          </svg>
+                        </h5>
+                      {% endif %}
+                      {% if block.settings.desc != blank %}
+                        <p class="our-slider__desc color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          {{ block.settings.desc | remove: '<p>' | remove: '</p>' }}
+                        </p>
+                      {% endif %}
+                      {% if block.settings.img_1 != blank %}
+                        <img src="{{ block.settings.img_1 | image_url }}" alt="{{ block.settings.img_1.alt }}" class="our-slider__img our-slider__img--1" />
+                      {% endif %}
+                      {% if block.settings.caption_1 != blank %}
+                        <p class="our-slider__caption our-slider__caption--1 color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          {{ block.settings.caption_1 }}
+                        </p>
+                      {% endif %}
+                    </div>
+                    <div class="our-slider__grid-item our-slider__grid-item--right">
+                      {% if block.settings.img_2 != blank %}
+                        <img src="{{ block.settings.img_2 | image_url }}" alt="{{ block.settings.img_2.alt }}" class="our-slider__img our-slider__img--2" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;" />
+                      {% endif %}
+                      {% if block.settings.caption_2 != blank %}
+                        <p class="our-slider__caption our-slider__caption--2 color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          {{ block.settings.caption_2 }}
+                        </p>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+              {% if block.type == 'layuout2' %}
+                <div class="our-slider__layout our-slider__lauoyt--2">
+                  <div class="our-slider__grid">
+                    <div class="our-slider__grid-item our-slider__grid-item--left">
+                      {% if block.settings.img_1 != blank %}
+                        <img src="{{ block.settings.img_1 | image_url }}" alt="{{ block.settings.img_1.alt }}" class="our-slider__img our-slider__img--1" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;" />
+                      {% endif %}
+                      {% if block.settings.caption_1 != blank %}
+                        <p class="our-slider__caption our-slider__caption--1 color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          {{ block.settings.caption_1 }}
+                        </p>
+                      {% endif %}
+                      {% if block.settings.title != blank %}
+                        <h5 class="our-slider__heading color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          <span>
+                            {{ block.settings.title | remove: '<p>' | remove: '</p>' }}
+                          </span>
+                          <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.71973 0.61084C7.86113 0.623259 8.00123 0.652043 8.13672 0.695801C8.17956 0.712366 8.22494 0.722113 8.27051 0.726074C8.31617 0.724441 8.36163 0.734022 8.40332 0.753418C8.44512 0.772877 8.4825 0.801779 8.51172 0.838379C8.55482 0.884132 8.60421 0.923664 8.6582 0.95459C8.95942 1.14812 9.22836 1.39095 9.45508 1.67334C9.52683 1.75431 9.61453 1.80453 9.68652 1.88525C9.81112 2.02483 9.92886 2.17781 10.0498 2.32471C10.1948 2.50032 10.3392 2.67677 10.4854 2.8501C10.6186 3.00823 10.7525 3.16653 10.8887 3.31885C11.0421 3.49031 11.1991 3.65476 11.3535 3.82471C11.3779 3.85001 11.4111 3.88379 11.4141 3.91846C11.4219 4.01688 11.4607 4.02507 11.5137 4.05225C11.5828 4.10345 11.6447 4.16474 11.6973 4.23389C11.7803 4.33716 11.8742 4.43065 11.9766 4.51318C12.191 4.64623 12.3161 4.93361 12.4854 5.14209C12.567 5.24709 12.6243 5.37074 12.6523 5.50244C12.6804 5.63413 12.6779 5.771 12.6465 5.90186C12.6339 5.96927 12.608 6.03359 12.5693 6.08936C12.3693 6.35247 12.1686 6.6153 11.9609 6.86475C11.7801 7.08184 11.5895 7.28035 11.4033 7.48682C11.3508 7.53709 11.3018 7.59124 11.2559 7.64795C11.0241 7.94571 10.7481 8.20346 10.4385 8.41162C10.2625 8.547 10.0812 8.66835 9.90527 8.80322C9.76652 8.90945 9.63242 9.03071 9.49414 9.13818C9.41843 9.19489 9.33987 9.24736 9.25879 9.29541C9.13677 9.37132 9.01582 9.44248 8.89453 9.51611C8.8758 9.52753 8.85883 9.54909 8.83984 9.55615C8.60512 9.64243 8.3712 9.73618 8.13477 9.81006C7.99176 9.85418 7.84246 9.85841 7.69922 9.896C7.52093 9.94895 7.32974 9.93235 7.16211 9.8501C7.1348 9.83448 7.10434 9.82512 7.07324 9.82275C6.93946 9.83664 6.80477 9.80071 6.69434 9.72119C6.58388 9.64159 6.5048 9.52311 6.4707 9.38818C6.43734 9.00523 6.4997 9.00896 6.66699 8.69092C6.88295 8.41051 7.14574 8.17164 7.44238 7.98682C7.66104 7.80969 7.89223 7.64986 8.13379 7.5083C8.44848 7.28257 8.74444 7.02929 9.01855 6.75244C9.08195 6.65026 9.21673 6.52106 9.35645 6.39014H8.4043L7.88281 6.55029H6.7207L6.15137 6.39014C6.03277 6.44365 5.74293 6.55027 5.53418 6.55029H4.8457C4.56865 6.49674 3.91579 6.39014 3.51758 6.39014C3.11934 6.39018 2.7983 6.49676 2.6875 6.55029H2.02344L1.44727 6.47607H0.886719C0.838266 6.47607 0.791228 6.45912 0.753906 6.42822L0.508789 6.22607C0.461137 6.18662 0.433704 6.12777 0.433594 6.06592V5.20752C0.433594 5.18304 0.437847 5.15823 0.446289 5.13525L0.59668 4.72803C0.626862 4.64643 0.705004 4.59239 0.791992 4.59229H3.89746L4.68066 4.43115H5.29688C5.41548 4.43115 5.5816 4.59225 6.03223 4.59229H9.21094C9.20492 4.58392 9.19805 4.57626 9.19238 4.56787C8.98887 4.26653 8.34104 3.63283 8.13672 3.23682C7.9171 2.90789 7.1494 2.12106 6.93555 1.76221C6.69346 1.48715 6.63585 0.97434 6.88867 0.850098C7.14608 0.709675 7.42933 0.627785 7.71973 0.61084Z" fill="black"/>
+                          </svg>
+                        </h5>
+                      {% endif %}
+                      {% if block.settings.desc != blank %}
+                        <p class="our-slider__desc color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          {{ block.settings.desc | remove: '<p>' | remove: '</p>' }}
+                        </p>
+                      {% endif %}
+                    </div>
+                    <div class="our-slider__grid-item our-slider__grid-item--right">
+                      {% if block.settings.img_2 != blank %}
+                        <img src="{{ block.settings.img_2 | image_url }}" alt="{{ block.settings.img_2.alt }}" class="our-slider__img our-slider__img--2" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;" />
+                      {% endif %}
+                      {% if block.settings.caption_2 != blank %}
+                        <p class="our-slider__caption our-slider__caption--2 color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          {{ block.settings.caption_2 }}
+                        </p>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+              {% if block.type == 'layuout3' %}
+                <div class="our-slider__layout our-slider__lauoyt--3">
+                  <div class="our-slider__grid">
+                    <div class="our-slider__grid-item our-slider__grid-item--left">
+                      {% if block.settings.title != blank %}
+                        <h5 class="our-slider__heading color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          <span>
+                            {{ block.settings.title | remove: '<p>' | remove: '</p>' }}
+                          </span>
+                          <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.71973 0.61084C7.86113 0.623259 8.00123 0.652043 8.13672 0.695801C8.17956 0.712366 8.22494 0.722113 8.27051 0.726074C8.31617 0.724441 8.36163 0.734022 8.40332 0.753418C8.44512 0.772877 8.4825 0.801779 8.51172 0.838379C8.55482 0.884132 8.60421 0.923664 8.6582 0.95459C8.95942 1.14812 9.22836 1.39095 9.45508 1.67334C9.52683 1.75431 9.61453 1.80453 9.68652 1.88525C9.81112 2.02483 9.92886 2.17781 10.0498 2.32471C10.1948 2.50032 10.3392 2.67677 10.4854 2.8501C10.6186 3.00823 10.7525 3.16653 10.8887 3.31885C11.0421 3.49031 11.1991 3.65476 11.3535 3.82471C11.3779 3.85001 11.4111 3.88379 11.4141 3.91846C11.4219 4.01688 11.4607 4.02507 11.5137 4.05225C11.5828 4.10345 11.6447 4.16474 11.6973 4.23389C11.7803 4.33716 11.8742 4.43065 11.9766 4.51318C12.191 4.64623 12.3161 4.93361 12.4854 5.14209C12.567 5.24709 12.6243 5.37074 12.6523 5.50244C12.6804 5.63413 12.6779 5.771 12.6465 5.90186C12.6339 5.96927 12.608 6.03359 12.5693 6.08936C12.3693 6.35247 12.1686 6.6153 11.9609 6.86475C11.7801 7.08184 11.5895 7.28035 11.4033 7.48682C11.3508 7.53709 11.3018 7.59124 11.2559 7.64795C11.0241 7.94571 10.7481 8.20346 10.4385 8.41162C10.2625 8.547 10.0812 8.66835 9.90527 8.80322C9.76652 8.90945 9.63242 9.03071 9.49414 9.13818C9.41843 9.19489 9.33987 9.24736 9.25879 9.29541C9.13677 9.37132 9.01582 9.44248 8.89453 9.51611C8.8758 9.52753 8.85883 9.54909 8.83984 9.55615C8.60512 9.64243 8.3712 9.73618 8.13477 9.81006C7.99176 9.85418 7.84246 9.85841 7.69922 9.896C7.52093 9.94895 7.32974 9.93235 7.16211 9.8501C7.1348 9.83448 7.10434 9.82512 7.07324 9.82275C6.93946 9.83664 6.80477 9.80071 6.69434 9.72119C6.58388 9.64159 6.5048 9.52311 6.4707 9.38818C6.43734 9.00523 6.4997 9.00896 6.66699 8.69092C6.88295 8.41051 7.14574 8.17164 7.44238 7.98682C7.66104 7.80969 7.89223 7.64986 8.13379 7.5083C8.44848 7.28257 8.74444 7.02929 9.01855 6.75244C9.08195 6.65026 9.21673 6.52106 9.35645 6.39014H8.4043L7.88281 6.55029H6.7207L6.15137 6.39014C6.03277 6.44365 5.74293 6.55027 5.53418 6.55029H4.8457C4.56865 6.49674 3.91579 6.39014 3.51758 6.39014C3.11934 6.39018 2.7983 6.49676 2.6875 6.55029H2.02344L1.44727 6.47607H0.886719C0.838266 6.47607 0.791228 6.45912 0.753906 6.42822L0.508789 6.22607C0.461137 6.18662 0.433704 6.12777 0.433594 6.06592V5.20752C0.433594 5.18304 0.437847 5.15823 0.446289 5.13525L0.59668 4.72803C0.626862 4.64643 0.705004 4.59239 0.791992 4.59229H3.89746L4.68066 4.43115H5.29688C5.41548 4.43115 5.5816 4.59225 6.03223 4.59229H9.21094C9.20492 4.58392 9.19805 4.57626 9.19238 4.56787C8.98887 4.26653 8.34104 3.63283 8.13672 3.23682C7.9171 2.90789 7.1494 2.12106 6.93555 1.76221C6.69346 1.48715 6.63585 0.97434 6.88867 0.850098C7.14608 0.709675 7.42933 0.627785 7.71973 0.61084Z" fill="black"/>
+                          </svg>
+                        </h5>
+                      {% endif %}
+                      {% if block.settings.desc != blank %}
+                        <p class="our-slider__desc color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          {{ block.settings.desc | remove: '<p>' | remove: '</p>' }}
+                        </p>
+                      {% endif %}
+                      {% if block.settings.img_1 != blank %}
+                        <img src="{{ block.settings.img_1 | image_url }}" alt="{{ block.settings.img_1.alt }}" class="our-slider__img our-slider__img--1" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;" />
+                      {% endif %}
+                      {% if block.settings.caption_1 != blank %}
+                        <p class="our-slider__caption our-slider__caption--1 color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          {{ block.settings.caption_1 }}
+                        </p>
+                      {% endif %}
+                    </div>
+                    <div class="our-slider__grid-item our-slider__grid-item--right">
+                      {% if block.settings.img_2 != blank %}
+                        <img src="{{ block.settings.img_2 | image_url }}" alt="{{ block.settings.img_2.alt }}" class="our-slider__img our-slider__img--2" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;" />
+                      {% endif %}
+                      {% if block.settings.caption_2 != blank %}
+                        <p class="our-slider__caption our-slider__caption--2 color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+                          {{ block.settings.caption_2 }}
+                        </p>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-btn-wrapper">
+          <div class="swiper-button-prev">
+            <svg width="55" height="56" viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="27.5326" cy="27.7096" r="26.3627" fill="#FFFFFB" stroke="black" stroke-width="2"/>
+              <g clip-path="url(#clip0_15030_873)">
+                <rect width="19.8432" height="29.5003" transform="translate(14.7676 38.304) rotate(-90)" fill="#FFFFFB"/>
+                <g clip-path="url(#clip1_15030_873)">
+                <g clip-path="url(#clip2_15030_873)">
+                <path d="M30.4857 28.1339C30.1143 28.6191 29.1429 29.2314 28.6933 29.8735C28.2438 30.5155 26.8115 31.8647 26.3603 32.7084C25.8751 33.4091 24.1798 35.0856 23.7076 35.85C23.1728 36.4359 23.0451 37.5292 23.6036 37.7938C24.1722 38.0931 24.7985 38.2666 25.4401 38.3027C25.7525 38.2762 26.061 38.2159 26.3603 38.1227C26.4553 38.0871 26.5547 38.0648 26.6557 38.0564C26.757 38.06 26.8577 38.0403 26.9502 37.9988C27.0426 37.9573 27.1243 37.8951 27.1888 37.817C27.284 37.7195 27.393 37.6365 27.5123 37.5707C28.178 37.1582 28.7729 36.6411 29.2739 36.0392C29.4324 35.8667 29.6254 35.7605 29.7844 35.5886C30.0598 35.291 30.3202 34.9649 30.5876 34.6517C30.9078 34.2776 31.2269 33.9024 31.5498 33.5331C31.8441 33.1962 32.1395 32.8593 32.4403 32.5348C32.7794 32.1693 33.1265 31.8189 33.4678 31.4567C33.5217 31.4028 33.595 31.3311 33.6015 31.2572C33.6187 31.0465 33.7039 31.0297 33.8214 30.9715C33.9741 30.8625 34.1105 30.7323 34.2268 30.585C34.4105 30.3647 34.6174 30.1648 34.844 29.9888C35.3178 29.7053 35.5927 29.0929 35.9668 28.6487C36.1472 28.425 36.2732 28.1626 36.3351 27.882C36.3971 27.6015 36.3931 27.3104 36.3237 27.0316C36.2959 26.8877 36.2372 26.7516 36.1517 26.6327C35.7097 26.072 35.2666 25.512 34.8079 24.9804C34.4084 24.5179 33.9885 24.0942 33.5772 23.6544C33.4612 23.5472 33.3521 23.4329 33.2505 23.3121C32.7384 22.6775 32.1289 22.1282 31.4447 21.6846C31.056 21.3962 30.6566 21.1386 30.2679 20.8513C29.9612 20.6249 29.6658 20.3661 29.3601 20.137C29.1925 20.0159 29.0185 19.9038 28.8389 19.8012C28.5694 19.6395 28.3031 19.4891 28.0351 19.3322C27.9936 19.3079 27.957 19.2605 27.9149 19.2454C27.3964 19.0616 26.8799 18.8638 26.3576 18.7064C26.0412 18.612 25.7107 18.6034 25.3938 18.5231C24.9998 18.4102 24.5782 18.4447 24.2078 18.6201C24.1472 18.6535 24.0801 18.6734 24.0111 18.6783C23.7154 18.6487 23.4189 18.7256 23.1749 18.8952C22.9309 19.0648 22.7555 19.3159 22.6801 19.6033C22.6063 20.42 22.7448 20.4119 23.1146 21.0901C23.5916 21.6874 24.1714 22.1949 24.8267 22.5886C25.3102 22.9665 25.8212 23.3077 26.3554 23.6096C27.0507 24.0906 27.7045 24.6288 28.3101 25.2187C28.6125 25.6888 29.6405 26.4343 29.958 26.8822C30.0825 27.058 30.6091 27.4957 30.8005 27.6908" fill="black"/>
+                </g>
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0_15030_873">
+                <rect width="19.8432" height="29.5003" fill="white" transform="translate(14.7676 38.304) rotate(-90)"/>
+                </clipPath>
+                <clipPath id="clip1_15030_873">
+                <rect width="19.8432" height="29.5003" fill="white" transform="translate(14.7677 38.3038) rotate(-90)"/>
+                </clipPath>
+                <clipPath id="clip2_15030_873">
+                <rect width="19.8432" height="13.7104" fill="white" transform="translate(22.6622 38.3038) rotate(-90)"/>
+                </clipPath>
+              </defs>
+            </svg> 
+          </div>
+          <div class="swiper-button-next">
+            <svg width="55" height="56" viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="27.5326" cy="27.7096" r="26.3627" fill="#FFFFFB" stroke="black" stroke-width="2"/>
+              <g clip-path="url(#clip0_15030_873)">
+                <rect width="19.8432" height="29.5003" transform="translate(14.7676 38.304) rotate(-90)" fill="#FFFFFB"/>
+                <g clip-path="url(#clip1_15030_873)">
+                <g clip-path="url(#clip2_15030_873)">
+                <path d="M30.4857 28.1339C30.1143 28.6191 29.1429 29.2314 28.6933 29.8735C28.2438 30.5155 26.8115 31.8647 26.3603 32.7084C25.8751 33.4091 24.1798 35.0856 23.7076 35.85C23.1728 36.4359 23.0451 37.5292 23.6036 37.7938C24.1722 38.0931 24.7985 38.2666 25.4401 38.3027C25.7525 38.2762 26.061 38.2159 26.3603 38.1227C26.4553 38.0871 26.5547 38.0648 26.6557 38.0564C26.757 38.06 26.8577 38.0403 26.9502 37.9988C27.0426 37.9573 27.1243 37.8951 27.1888 37.817C27.284 37.7195 27.393 37.6365 27.5123 37.5707C28.178 37.1582 28.7729 36.6411 29.2739 36.0392C29.4324 35.8667 29.6254 35.7605 29.7844 35.5886C30.0598 35.291 30.3202 34.9649 30.5876 34.6517C30.9078 34.2776 31.2269 33.9024 31.5498 33.5331C31.8441 33.1962 32.1395 32.8593 32.4403 32.5348C32.7794 32.1693 33.1265 31.8189 33.4678 31.4567C33.5217 31.4028 33.595 31.3311 33.6015 31.2572C33.6187 31.0465 33.7039 31.0297 33.8214 30.9715C33.9741 30.8625 34.1105 30.7323 34.2268 30.585C34.4105 30.3647 34.6174 30.1648 34.844 29.9888C35.3178 29.7053 35.5927 29.0929 35.9668 28.6487C36.1472 28.425 36.2732 28.1626 36.3351 27.882C36.3971 27.6015 36.3931 27.3104 36.3237 27.0316C36.2959 26.8877 36.2372 26.7516 36.1517 26.6327C35.7097 26.072 35.2666 25.512 34.8079 24.9804C34.4084 24.5179 33.9885 24.0942 33.5772 23.6544C33.4612 23.5472 33.3521 23.4329 33.2505 23.3121C32.7384 22.6775 32.1289 22.1282 31.4447 21.6846C31.056 21.3962 30.6566 21.1386 30.2679 20.8513C29.9612 20.6249 29.6658 20.3661 29.3601 20.137C29.1925 20.0159 29.0185 19.9038 28.8389 19.8012C28.5694 19.6395 28.3031 19.4891 28.0351 19.3322C27.9936 19.3079 27.957 19.2605 27.9149 19.2454C27.3964 19.0616 26.8799 18.8638 26.3576 18.7064C26.0412 18.612 25.7107 18.6034 25.3938 18.5231C24.9998 18.4102 24.5782 18.4447 24.2078 18.6201C24.1472 18.6535 24.0801 18.6734 24.0111 18.6783C23.7154 18.6487 23.4189 18.7256 23.1749 18.8952C22.9309 19.0648 22.7555 19.3159 22.6801 19.6033C22.6063 20.42 22.7448 20.4119 23.1146 21.0901C23.5916 21.6874 24.1714 22.1949 24.8267 22.5886C25.3102 22.9665 25.8212 23.3077 26.3554 23.6096C27.0507 24.0906 27.7045 24.6288 28.3101 25.2187C28.6125 25.6888 29.6405 26.4343 29.958 26.8822C30.0825 27.058 30.6091 27.4957 30.8005 27.6908" fill="black"/>
+                </g>
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0_15030_873">
+                <rect width="19.8432" height="29.5003" fill="white" transform="translate(14.7676 38.304) rotate(-90)"/>
+                </clipPath>
+                <clipPath id="clip1_15030_873">
+                <rect width="19.8432" height="29.5003" fill="white" transform="translate(14.7677 38.3038) rotate(-90)"/>
+                </clipPath>
+                <clipPath id="clip2_15030_873">
+                <rect width="19.8432" height="13.7104" fill="white" transform="translate(22.6622 38.3038) rotate(-90)"/>
+                </clipPath>
+              </defs>
+            </svg>          
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{{ 'our-slider.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "Our Slider",
+  "settings": [
+    
+  ],
+  "blocks": [
+    {
+      "type": "layuout1",
+      "name": "Layout 1",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image 1",
+          "id": "img_1"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image 2",
+          "id": "img_2"
+        },
+        {
+          "type": "richtext",
+          "label": "Heading",
+          "id": "title"
+        },
+        {
+          "type": "richtext",
+          "label": "Description",
+          "id": "desc"
+        },
+        {
+          "type": "text",
+          "label": "Image 1 Caption",
+          "id": "caption_1"
+        },
+        {
+          "type": "text",
+          "label": "Image 2 Caption",
+          "id": "caption_2"
+        }
+      ]
+    },
+    {
+      "type": "layuout2",
+      "name": "Layout 2",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image 1",
+          "id": "img_1"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image 2",
+          "id": "img_2"
+        },
+        {
+          "type": "richtext",
+          "label": "Heading",
+          "id": "title"
+        },
+        {
+          "type": "richtext",
+          "label": "Description",
+          "id": "desc"
+        },
+        {
+          "type": "text",
+          "label": "Image 1 Caption",
+          "id": "caption_1"
+        },
+        {
+          "type": "text",
+          "label": "Image 2 Caption",
+          "id": "caption_2"
+        }
+      ]
+    },
+    {
+      "type": "layuout3",
+      "name": "Layout 3",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image 1",
+          "id": "img_1"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image 2",
+          "id": "img_2"
+        },
+        {
+          "type": "richtext",
+          "label": "Heading",
+          "id": "title"
+        },
+        {
+          "type": "richtext",
+          "label": "Description",
+          "id": "desc"
+        },
+        {
+          "type": "text",
+          "label": "Image 1 Caption",
+          "id": "caption_1"
+        },
+        {
+          "type": "text",
+          "label": "Image 2 Caption",
+          "id": "caption_2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Slider"
+    }
+  ]
+}
+{% endschema %}

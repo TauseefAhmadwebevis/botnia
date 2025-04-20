@@ -1,0 +1,60 @@
+{{ 'banner-with-text.css' | asset_url | stylesheet_tag }}
+
+<section class="text-banner">
+  <div class="text-banner__container">
+    {% if section.settings.desktop_image != blank %}
+      <div class="text-banner__media">
+        <picture  data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">
+          {% if section.settings.mobile_image != blank %}
+            <source media="(max-width:989px)" srcset="{{ section.settings.mobile_image | image_url }}">
+          {% endif %}
+          <img src="{{ section.settings.desktop_image | image_url }}" alt="{{ section.settings.desktop_image.alt }}" class="text-banner__img" height="{{ section.settings.desktop_image.height }}" width="{{ section.settings.desktop_image.width }}">
+        </picture>
+      </div>
+    {% endif %}
+    <div class="text-banner__content">
+      {% if section.settings.caption != blank %}
+        <p class="text-banner__caption text-center color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ section.settings.caption }}</p>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2 class="text-banner__heading text-center color-black" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out" style="--aos-translate-y: 5px;">{{ section.settings.heading }}</h2>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Banner With Text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "desktop_image",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Your Heading Here"
+      },
+      {
+        "type": "textarea",
+        "id": "caption",
+        "label": "Caption",
+        "default": "Add a short description or promotional text here."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner With Text"
+      }
+    ]
+  }
+{% endschema %}
+  

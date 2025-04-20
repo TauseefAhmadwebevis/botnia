@@ -1,53 +1,90 @@
-{
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "footer": {
-      "type": "footer",
+    "main_footer_VdKB7d": {
+      "type": "main-footer",
       "blocks": {
-        "footer-0": {
-          "type": "link_list",
+        "links_block_8QfYVx": {
+          "type": "links_block",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "title": "Shop",
+            "menu": "footer-shop"
           }
         },
-        "footer-1": {
-          "type": "link_list",
+        "links_block_CA8GLt": {
+          "type": "links_block",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "title": "Explore",
+            "menu": "footer-explore"
           }
         },
-        "footer-2": {
-          "type": "text",
+        "links_block_F7QrTz": {
+          "type": "links_block",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "title": "Find Us",
+            "menu": "find-us"
+          }
+        },
+        "links_block_7dU9QC": {
+          "type": "links_block",
+          "settings": {
+            "title": "About",
+            "menu": "about"
+          }
+        },
+        "policies_block_rQkj3m": {
+          "type": "policies_block",
+          "settings": {
+            "policies_menu": "policies"
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "links_block_8QfYVx",
+        "links_block_CA8GLt",
+        "links_block_F7QrTz",
+        "links_block_7dU9QC",
+        "policies_block_rQkj3m"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "footer_logo": "shopify://shop_images/Link_botnia-logo_svg.png",
+        "instagram_link": "#",
+        "wholesale_text": "WHOLESALE",
+        "wholesale_url": "#",
+        "copy_right": "<p><a href=\"#\" title=\"#\">Built by Zulu</a></p>"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
         "payment_enable": true,
-        "show_policy": false,
-        "margin_top": 48,
+        "show_policy": true,
+        "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
+    "main_footer_VdKB7d",
     "footer"
   ]
 }

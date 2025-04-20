@@ -1,0 +1,42 @@
+.insta-slider {
+  padding: 64px 0 0 0;
+  background: var(--color-light-yellow);
+}
+
+.insta-slider__caption,
+.insta-slider__heading {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0;
+  font-weight: var(--font-weight-400);
+}
+
+.insta-slider__caption {
+  font-size: var(--font-size-18);
+  line-height: 100%;
+  letter-spacing: 0.18px;
+  margin-bottom: 19px;
+}
+
+.insta-slider__img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  aspect-ratio: 1;
+}
+
+.insta-slider__blocks {
+  margin-top: 38px;
+}
+
+@media (max-width: 989px) {
+  .insta-slider__heading {
+    font-size: var(--font-size-22);
+  }
+
+  .insta-slider__heading br {
+    display: none;
+  }
+}
